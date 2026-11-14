@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     if: contains(github.event.pull_request.labels.*.name, 'stage')
-
-    
+    steps:
+      - name: Confirm staging workflow trigger
+        run: echo "Stage the app workflow triggered."
